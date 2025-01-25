@@ -5,6 +5,21 @@ import { BuildOptions } from "./types/config";
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
   //Если не используем тайпскрипт - нужен babel-loader
 
+  const svgLoader = {
+    test: /\.svg$/i,
+
+    use: ["@svgr/webpack"],
+  };
+
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif)$/i,
+    use: [
+      {
+        loader: "file-loader",
+      },
+    ],
+  };
+
   const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -29,5 +44,5 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     use: "ts-loader",
     exclude: /node_modules/,
   };
-  return [typescriptLoader, cssLoader];
+  return [typescriptLoader, cssLoader, fileLoader, svgLoader];
 }
