@@ -7,20 +7,16 @@ describe('classNems', () => {
     });
     test('with additional', () => {
         const expected = 'sclass hovered scrollable';
-        expect(classNames(
-            'sclass',
-            { hovered: true, scrollable: true },
-        )).toBe(expected);
+        expect(classNames('sclass', { hovered: true, scrollable: true }))
+            .toBe(expected);
     });
     test('with mods undefined', () => {
         const expected = 'sclass class1 class2 hovered';
         expect(classNames(
             'sclass',
-            {
-                hovered: true,
-                scrollable: undefined,
-            },
+            { hovered: true, scrollable: undefined },
             ['class1', 'class2'],
-        )).toBe(expected);
+        ))
+            .toBe(expected);
     });
 });

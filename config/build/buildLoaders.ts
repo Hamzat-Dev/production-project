@@ -21,7 +21,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     };
 
     const babelLoader = {
-        test: /\.(js|jsx|tsx)$/,
+        test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
         use: {
             loader: 'babel-loader',
@@ -47,8 +47,13 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
                 loader: 'css-loader',
                 options: {
                     modules: {
-                        auto: (resPath: string) => Boolean(resPath.includes('.module.')),
-                        localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]',
+                        auto:
+                       (resPath: string) => Boolean(
+                           resPath.includes('.module.'),
+                       ),
+
+                        localIdentName: isDev ? '[path][name]__[local]'
+                            : '[hash:base64:8]',
                     },
                 },
             },
