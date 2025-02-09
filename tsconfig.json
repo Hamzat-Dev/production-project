@@ -3,7 +3,7 @@
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "ESNext",
-    "target": "ES5",
+    "target": "ES6",
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
@@ -20,7 +20,8 @@
     }
   },
   "include": [
-    "src",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
     "./config/jest/setupTests.ts"
   ],
 }
