@@ -1,6 +1,7 @@
-import { BugButton } from './ui/BugButton';
 import ErrorBoundary from './ui/ErrorBoundary';
+import { BugButton } from './ui/BugButton';
 
-export { BugButton, ErrorBoundary };
-// eslint-disable-next-line no-multiple-empty-lines
-
+export {
+    ErrorBoundary,
+    BugButton,
+};

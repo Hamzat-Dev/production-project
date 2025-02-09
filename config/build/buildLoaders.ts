@@ -3,16 +3,13 @@ import { buildCssLoader } from './loaders/buildCssLoader';
 import { BuildOptions } from './types/config';
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
-    // Если не используем тайпскрипт - нужен babel-loader
-
     const svgLoader = {
-        test: /\.svg$/i,
-
+        test: /\.svg$/,
         use: ['@svgr/webpack'],
     };
 
     const babelLoader = {
-        test: /\.(js|jsx|ts|tsx)$/,
+        test: /\.(js|jsx|tsx)$/,
         exclude: /node_modules/,
         use: {
             loader: 'babel-loader',
@@ -21,7 +18,10 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
                 plugins: [
                     [
                         'i18next-extract',
-                        { locales: ['ru', 'en'], keyAsDefaultValue: true },
+                        {
+                            locales: ['ru', 'en'],
+                            keyAsDefaultValue: true,
+                        },
                     ],
                 ],
             },
@@ -30,18 +30,27 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
 
     const cssLoader = buildCssLoader(isDev);
 
+    // Если не используем тайпскрипт - нужен babel-loader
     const typescriptLoader = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
     };
+
     const fileLoader = {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|woff2|woff)$/i,
         use: [
             {
                 loader: 'file-loader',
             },
         ],
     };
-    return [fileLoader, svgLoader, babelLoader, typescriptLoader, cssLoader];
+
+    return [
+        fileLoader,
+        svgLoader,
+        babelLoader,
+        typescriptLoader,
+        cssLoader,
+    ];
 }

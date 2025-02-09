@@ -1,8 +1,8 @@
-import { FC, PropsWithChildren } from 'react';
+import { Story } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
 
-export const RouterDecorator: FC<PropsWithChildren> = ({ children }) => (
+export const RouterDecorator = (story: () => Story) => (
     <BrowserRouter>
-        {children}
+        {story()}
     </BrowserRouter>
 );
