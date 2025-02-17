@@ -14,8 +14,8 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
-    "testw:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
-    "test:ui:ci": "concurrently -s first -k \"npm run storybook\" \"npm run test:ui\"",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
+    "tests:ui:ci": "concurrently -s first -k \"npm run storybook\" \"npm run test:ui\"",
     "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
     "test:ui:json": "node scripts/generate-visual-json-report.js",
     "test:ui:html": "npx reg-cli --from .loki/report.json --report .loki/report.html",
@@ -82,6 +82,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.0",
     "concurrently": "^9.1.2",
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^6.1.3",
@@ -89,6 +90,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.15.5",
+    "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "reg-cli": "^0.17.6"
   },
