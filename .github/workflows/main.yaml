@@ -16,9 +16,7 @@ jobs:
       - name: Staring Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Clear npm cache
-        run: npm cache clean --force
+          node-version: ${{ matrix.node-version }}    
       - name: install modules
         run: npm install
       - name: build production project
