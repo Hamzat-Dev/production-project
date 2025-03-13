@@ -46,7 +46,7 @@ OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
 export const BackGroundTheme = Template.bind({});
 BackGroundTheme.args = {
     children: 'Text',
-    theme: BackGroundTheme.BACKGROUND,
+    theme: ButtonTheme.BACKGROUND,
 };
 
 export const BackGroundInverted = Template.bind({});
