@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 import {
     AnyAction, EnhancedStore, Reducer, ReducersMapObject
 } from '@reduxjs/toolkit';
