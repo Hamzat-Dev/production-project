@@ -23,6 +23,11 @@ const article: Article = {
     img: TestImg,
     views: 1022,
     createdAt: '26.02.2022',
+    user: {
+        id: '1',
+        username: 'Hamza',
+        avatar: TestImg,
+    },
     type: [ArticleType.IT],
     blocks: [
         {
@@ -52,7 +57,7 @@ const article: Article = {
         {
             id: '2',
             type: ArticleBlockType.IMAGE,
-            src: 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
+            src: TestImgArticle,
             title: 'Рисунок 1 - скриншот сайта',
         },
         {

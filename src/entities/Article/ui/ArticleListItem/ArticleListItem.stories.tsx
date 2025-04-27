@@ -1,28 +1,37 @@
-/* eslint-disable max-len */
-import { Article, ArticleList, ArticleView } from 'entities/Article';
-import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './ArticlesPage.module.scss';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import React from 'react';
+import TestImgArticle from 'shared/assets/tests/jsStorybook.jpg';
+import TestImg from 'shared/assets/tests/storybook.jpg';
+import { Article, ArticleView } from '../../model/types/article';
+import { ArticleListItem } from './ArticleListItem';
 
-interface ArticlesPageProps {
-  className?: string;
-}
+export default {
+    title: 'entities/Article/ArticleListItem',
+    component: ArticleListItem,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+} as ComponentMeta<typeof ArticleListItem>;
+
+const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
 
 const article = {
     id: '1',
-    title: 'Javascript news',
+    title: 'Javascript news asfasjf asfjkask f',
     subtitle: 'Что нового в JS за 2022 год?',
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB6laB2hAlD5aZL2pSWPXn-m-LPKIag76T7A&s',
+    img: TestImgArticle,
     views: 1022,
     createdAt: '26.02.2022',
     user: {
         id: '1',
-        username: 'Hamza',
-        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvWaIbEBiCIA7slnagLvZgovNDLEpopmcXwQ&s',
+        username: 'Ulbi tv',
+        avatar: TestImg,
     },
     type: [
         'IT',
+        'SCIENCE',
+        'POLITICS',
+        'ECONOMICS',
     ],
     blocks: [
         {
@@ -52,7 +61,7 @@ const article = {
         {
             id: '2',
             type: 'IMAGE',
-            src: 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
+            src: TestImgArticle,
             title: 'Рисунок 1 - скриншот сайта',
         },
         {
@@ -72,7 +81,7 @@ const article = {
         {
             id: '8',
             type: 'IMAGE',
-            src: 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
+            src: TestImgArticle,
             title: 'Рисунок 1 - скриншот сайта',
         },
         {
@@ -86,20 +95,14 @@ const article = {
     ],
 } as Article;
 
-const ArticlesPage = ({ className }: ArticlesPageProps) => {
-    const { t } = useTranslation();
-    return (
-        <div className={classNames(cls.ArticlesPage, {}, [className])}>
-            <ArticleList
-                view={ArticleView.SMALL}
-                articles={
-                    new Array(17).fill(0).map((artc, index) => ({
-                        ...article,
-                        id: String(index),
-                    }))
-                }
-            />
-        </div>
-    );
+export const Big = Template.bind({});
+Big.args = {
+    view: ArticleView.BIG,
+    article,
 };
-export default memo(ArticlesPage);
+
+export const Small = Template.bind({});
+Small.args = {
+    view: ArticleView.SMALL,
+    article,
+};
