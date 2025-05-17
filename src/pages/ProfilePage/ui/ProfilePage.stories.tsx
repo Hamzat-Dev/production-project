@@ -1,11 +1,10 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
+import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
 import avatar from 'shared/assets/tests/storybook.jpg';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Country } from '../../../entities/Country';
-import { Currency } from '../../../entities/Currency';
-import { MainPage } from '../../MainPage';
 import ProfilePage from './ProfilePage';
 
 export default {
@@ -17,7 +16,7 @@ export default {
 } as ComponentMeta<typeof ProfilePage>;
 
 // eslint-disable-next-line react/jsx-props-no-spreading
-const Template: ComponentStory<typeof MainPage> = (args) => <ProfilePage {...args} />;
+const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {};
