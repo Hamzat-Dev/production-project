@@ -12,6 +12,7 @@ const MainPage = () => {
     return (
         <Page>
             {t('Главная страница')}
+
         </Page>
     );
 };
