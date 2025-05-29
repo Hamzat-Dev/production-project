@@ -41,6 +41,7 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
             value={value}
             items={options}
             onChange={onChangeHandler}
+            direction="top right"
 
         />
 
