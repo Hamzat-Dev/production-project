@@ -595,6 +595,18 @@
       "userId": "1",
       "text": "python!!!",
       "id": "p5rMadd"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "sada",
+      "id": "0EObVjl"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "asd",
+      "id": "dHay9Z_"
     }
   ],
   "users": [
@@ -603,7 +615,7 @@
       "username": "admin",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+      "avatar": "https://habrastorage.org/getpro/habr/upload_files/28a/7ce/931/28a7ce931012ba51764f50d36662af6b.jpg"
     },
     {
       "id": "2",
@@ -623,7 +635,7 @@
       "country": "Belarus",
       "city": "Moscow",
       "username": "admin213",
-      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+      "avatar": "https://habrastorage.org/getpro/habr/upload_files/28a/7ce/931/28a7ce931012ba51764f50d36662af6b.jpg"
     },
     {
       "id": "2",
