@@ -21,12 +21,12 @@ export const profileSlice = createSlice({
 
         cancelEdit: (state) => {
             state.readonly = true;
-            state.form = state.data;
             state.validateErrors = undefined;
+            state.form = state.data;
         },
         updateProfile: (state, action: PayloadAction<Profile>) => {
             state.form = {
-                ...state.data,
+                ...state.form,
                 ...action.payload,
             };
         },
