@@ -34,6 +34,7 @@ export const ArticleDetailsComments = ({ className, id }: ArticleDetailsComments
     return (
         <VStack
             gap="16"
+            max
             className={classNames('', {}, [className])}
         >
             <Text size={TextSize.L} title={t('Комментарии')} />

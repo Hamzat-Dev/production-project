@@ -614,15 +614,22 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://habrastorage.org/getpro/habr/upload_files/28a/7ce/931/28a7ce931012ba51764f50d36662af6b.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
+      "avatar": "https://i.pinimg.com/736x/9f/90/ad/9f90ad43a084da45b9a352fc0a3ad33c.jpg"
     }
   ],
   "profile": [
