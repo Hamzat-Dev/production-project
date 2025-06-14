@@ -2,7 +2,8 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 import TestImgArticle from 'shared/assets/tests/jsStorybook.jpg';
 import TestImg from 'shared/assets/tests/storybook.jpg';
-import { Article, ArticleView } from '../../model/types/article';
+import { ArticleView } from '../../model/consts/articleConsts';
+import { Article } from '../../model/types/article';
 import { ArticleList } from './ArticleList';
 
 export default {
