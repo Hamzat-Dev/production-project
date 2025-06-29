@@ -16,7 +16,6 @@ export const NotificationList = memo(({ className }: NotificationListProps) => {
     const { data, isLoading } = useNotifications(null, {
         pollingInterval: 5000,
     });
-    console.log(data);
     if (isLoading) {
         return (
             <VStack
