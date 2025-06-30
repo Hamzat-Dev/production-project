@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import TestImgArticle from 'shared/assets/tests/jsStorybook.jpg';
-import TestImg from 'shared/assets/tests/storybook.jpg';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import TestImgArticle from '@/shared/assets/tests/jsStorybook.jpg';
+import TestImg from '@/shared/assets/tests/storybook.jpg';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ArticleBlockType, ArticleType } from '../../model/consts/articleConsts';
 import { Article } from '../../model/types/article';
 import { ArticleDetails } from './ArticleDetails';
