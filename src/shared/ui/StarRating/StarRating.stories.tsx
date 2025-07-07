@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import {StarRating} from './StarRating';
+import { StarRating } from './StarRating';
 
 export default {
     title: 'shared/StarRating',
@@ -12,6 +12,4 @@ export default {
 const Template: ComponentStory<typeof StarRating> = (args) => <StarRating {...args} />;
 
 export const Normal = Template.bind({});
-Normal.args = {
-    
-};
+Normal.args = {};
