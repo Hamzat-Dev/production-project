@@ -5,7 +5,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { ErrorPage } from './ErrorPage';
 
 export default {
-    title: 'widget/ErrorPage',
+    title: 'widgets/ErrorPage',
     component: ErrorPage,
     argTypes: {
         backgroundColor: { control: 'color' },
