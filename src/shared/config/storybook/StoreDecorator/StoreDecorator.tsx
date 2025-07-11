@@ -1,24 +1,23 @@
-/* eslint-disable path-checker-my/public-api-imports */
 import { Story } from '@storybook/react';
+// TODO
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
-import { articleDetailsReducer } from '@/entities/Article/model/slice/articleDetailsSlice';
-import { addCommentFormReducer } from '@/features/addCommentForm/model/slices/addCommentFormSlice';
-import { loginReducer } from '@/features/AuthByUsername/model/slice/loginSlice';
-import { profileReducer } from '@/features/editableProfileCard/model/slice/profileSlice';
-import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/model/slices';
+import { loginReducer } from '@/features/AuthByUsername/testing';
 import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { articleDetailsReducer } from '@/entities/Article/testing';
+import { addCommentFormReducer } from '@/features/addCommentForm/testing';
+import { profileReducer } from '@/features/editableProfileCard/testing';
 
-const defaultAsyncReducers:ReducersList = {
+const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
-    addCommentForm: addCommentFormReducer,
     articleDetails: articleDetailsReducer,
-    articleDetailsPage: articleDetailsPageReducer,
+    addCommentForm: addCommentFormReducer,
+    articleDetailsPage: articleDetailsReducer,
 };
 
 export const StoreDecorator = (
     state: DeepPartial<StateSchema>,
-    asyncReducers?:ReducersList,
+    asyncReducers?: ReducersList,
 ) => (StoryComponent: Story) => (
     <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}>
         <StoryComponent />
