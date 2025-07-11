@@ -61,6 +61,7 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'path-checker-my/path-checker': ['error', { alias: '@' }],
+        'path-checker-my/public-api-imports': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,

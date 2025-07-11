@@ -1,5 +1,5 @@
 export {
-    ArticleSortField, ArticleType, ArticleView,
+    ArticleSortField, ArticleType, ArticleView, ArticleBlockType,
 } from './model/consts/articleConsts';
 export { getArticleDetailsData } from './model/selectors/articleDetails';
 export type {
