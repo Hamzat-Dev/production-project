@@ -1,4 +1,6 @@
-import type { StateSchema, ThunkConfig } from './config/StateSchema';
+import type {
+    StateSchema, ThunkConfig, ReduxStoreWithManager, StateSchemaKey,
+} from './config/StateSchema';
 import { AppDispatch, createReduxStore } from './config/store';
 import { StoreProvider } from './ui/StoreProvider';
 
@@ -11,6 +13,8 @@ export type {
     StateSchema,
     AppDispatch,
     ThunkConfig,
+    ReduxStoreWithManager,
+    StateSchemaKey,
 };
 
 // eslint-disable-next-line no-multiple-empty-lines

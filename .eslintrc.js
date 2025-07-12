@@ -61,6 +61,11 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'path-checker-my/path-checker': ['error', { alias: '@' }],
+        'path-checker-my/layer-imports': ['error', {
+            alias: '@',
+            ignoreImportPatterns: ['**/StoreProvider*', '**/testing'],
+
+        }],
         'path-checker-my/public-api-imports': ['error', {
             alias: '@',
             testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx*'],
