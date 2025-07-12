@@ -1,4 +1,3 @@
-import { Description } from '@headlessui/react/dist/components/description/description';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import withMock from 'storybook-addon-mock';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
