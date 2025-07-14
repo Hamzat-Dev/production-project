@@ -1,5 +1,5 @@
 /* eslint-disable comma-dangle */
-import { DeepPartial } from '@reduxjs/toolkit';
+import { DeepPartial, AnyAction } from '@reduxjs/toolkit';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import { ValidateProfileError } from '../../model/consts/consts';
@@ -15,6 +15,13 @@ const data = {
     first: 'Hamza',
     city: 'makha',
     currency: Currency.EUR,
+};
+const fakePending: AnyAction = {
+    type: updateProfileData.pending.type,
+};
+const fakeFulfilled: AnyAction = {
+    type: updateProfileData.fulfilled.type,
+    payload: data,
 };
 
 describe('profileSlice.test', () => {
@@ -58,7 +65,7 @@ describe('profileSlice.test', () => {
         };
         expect(profileReducer(
             state as ProfileSchema,
-            updateProfileData.pending,
+            fakePending
         )).toEqual({
             isLoading: true,
             validateErrors: undefined,
@@ -72,7 +79,7 @@ describe('profileSlice.test', () => {
         };
         expect(profileReducer(
             state as ProfileSchema,
-            updateProfileData.fulfilled(data, ''),
+            fakeFulfilled,
         )).toEqual({
             isLoading: false,
             validateErrors: undefined,

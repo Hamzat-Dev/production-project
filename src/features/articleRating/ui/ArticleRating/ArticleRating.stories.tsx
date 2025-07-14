@@ -30,7 +30,7 @@ Normal.decorators = [
 Normal.parameters = {
     mockData: [
         {
-            url: `${__API__}/article_ratings?userId=1&articleId=1`,
+            url: `${__API__}/article-ratings?userId=1&articleId=1`,
             method: 'GET',
             status: 200,
             response: [
@@ -41,7 +41,7 @@ Normal.parameters = {
 };
 
 export const WithoutRate = Template.bind({});
-Normal.args = {
+WithoutRate.args = {
     articleId: '2',
 };
 
@@ -56,7 +56,7 @@ WithoutRate.decorators = [
 WithoutRate.parameters = {
     mockData: [
         {
-            url: `${__API__}/article_ratings?userId=1&articleId=1`,
+            url: `${__API__}/article-ratings?userId=1&articleId=2`,
             method: 'GET',
             status: 200,
             response: [

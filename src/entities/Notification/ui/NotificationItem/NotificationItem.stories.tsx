@@ -13,5 +13,10 @@ const Template: ComponentStory<typeof NotificationItem> = (args) => <Notificatio
 
 export const Normal = Template.bind({});
 Normal.args = {
-
+    item: {
+        id: '1',
+        title: 'New message',
+        description: 'You have a new notification',
+        href: '/messages/1',
+    },
 };
